@@ -9,8 +9,9 @@
     <Files>
       <File FileName="Assets/Scripts/GameManager.cs" Line="14" Column="43" />
       <File FileName="Assets/Scripts/Paddle.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/Ball.cs" Line="38" Column="6" />
-      <File FileName="Assets/Scripts/GlobalScript.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/Ball.cs" Line="24" Column="45" />
+      <File FileName="Assets/Scripts/GlobalScript.cs" Line="10" Column="28" />
+      <File FileName="Assets/Scripts/SoundManager.cs" Line="14" Column="51" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

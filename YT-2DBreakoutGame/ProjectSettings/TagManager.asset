@@ -8,6 +8,8 @@ TagManager:
   - Paddle
   - OutOfBounds
   - Block
+  - GlobalManager
+  - SoundManager
   layers:
   - Default
   - TransparentFX

@@ -60,6 +60,7 @@
     <Compile Include="Assets/Scripts/Ball.cs" />
     <Compile Include="Assets/Scripts/Paddle.cs" />
     <Compile Include="Assets/Scripts/GlobalScript.cs" />
+    <Compile Include="Assets/Scripts/SoundScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
