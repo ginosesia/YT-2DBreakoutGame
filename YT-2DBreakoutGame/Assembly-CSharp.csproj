@@ -57,8 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/GameManager.cs" />
-    <Compile Include="Assets/Scripts/Paddle.cs" />
     <Compile Include="Assets/Scripts/Ball.cs" />
+    <Compile Include="Assets/Scripts/Paddle.cs" />
+    <Compile Include="Assets/Scripts/GlobalScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

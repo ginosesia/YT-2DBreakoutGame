@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +7,9 @@ public class Paddle : MonoBehaviour
 
     readonly string horizontal = "Horizontal";
     [SerializeField] private Rigidbody2D rigidbody;
+    [SerializeField] GameObject globalManager;
+    GlobalScript globalScript;
+
 
     float speed = 15f;
     float horizontalInput;
@@ -17,22 +20,22 @@ public class Paddle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        globalScript = globalManager.GetComponent<GlobalScript>();
     }
-
-
 
     // Update is called once per frame
     void Update()
     {
-        MovePaddle();
+        if(!globalScript.isPaused)
+        {
+            //Move Paddle
+            MovePaddle();
+        }
     }
 
     public void MovePaddle()
     {
         horizontalInput = Input.GetAxis(horizontal);
-
-
 
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
         {
@@ -50,7 +53,5 @@ public class Paddle : MonoBehaviour
         {
             transform.position = new Vector2(rightBoundary, transform.position.y);
         }
-
     }
-
 }
