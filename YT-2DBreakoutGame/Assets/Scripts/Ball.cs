@@ -6,9 +6,13 @@ public class Ball : MonoBehaviour
 {
 
     float ballForce = 500;
-    [SerializeField] Rigidbody2D rigidbody;
+    [SerializeField] Rigidbody2D rigidBody;
     [SerializeField] Transform pinkEffect;
     [SerializeField] Transform blueEffect;
+    [SerializeField] Transform redEffect;
+    [SerializeField] Transform greenEffect;
+    [SerializeField] Transform orangeEffect;
+    [SerializeField] Transform yellowEffect;
 
     GameObject soundManager;
     GameObject globalManager;
@@ -22,6 +26,10 @@ public class Ball : MonoBehaviour
     readonly string block = "Block";
     readonly string pinkBlock = "PinkBlock";
     readonly string blueBlock = "BlueBlock";
+    readonly string redBlock = "RedBlock";
+    readonly string greenBlock = "GreenBlock";
+    readonly string orangeBlock = "OrangeBlock";
+    readonly string yellowBlock = "YellowBlock";
 
     private Vector3 startPosition;
 
@@ -57,7 +65,7 @@ public class Ball : MonoBehaviour
         if(!ballInPlay) {
             if (Input.GetButtonDown("Jump"))
             {
-                rigidbody.AddForce(Vector2.up * ballForce);
+                rigidBody.AddForce(Vector2.up * ballForce);
                 ballInPlay = true;
             }
         }
@@ -74,6 +82,8 @@ public class Ball : MonoBehaviour
             globalScript.isDead = true;
             //Play sound
             soundScript.PlaySound(1);
+            //Reduce lives
+            globalScript.lives -= 1;
         }
     }
 
@@ -81,8 +91,10 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.tag == block)
         {
+            globalScript.score += 5;
+
             Destroy(collision.gameObject);
-            if(collision.gameObject.name == pinkBlock)
+            if (collision.gameObject.name == pinkBlock)
             {
                 PlayEffect(pinkEffect, collision);
             }
@@ -90,7 +102,22 @@ public class Ball : MonoBehaviour
             {
                 PlayEffect(blueEffect, collision);
             }
-
+            if (collision.gameObject.name == redBlock)
+            {
+                PlayEffect(redEffect, collision);
+            }
+            if (collision.gameObject.name == greenBlock)
+            {
+                PlayEffect(greenEffect, collision);
+            }
+            if (collision.gameObject.name == orangeBlock)
+            {
+                PlayEffect(orangeEffect, collision);
+            }
+            if (collision.gameObject.name == yellowBlock)
+            {
+                PlayEffect(yellowEffect, collision);
+            }
         }
     }
 

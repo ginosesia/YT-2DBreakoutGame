@@ -6,7 +6,8 @@ public class Paddle : MonoBehaviour
 {
 
     readonly string horizontal = "Horizontal";
-    [SerializeField] private Rigidbody2D rigidbody;
+    readonly string paddle = "Paddle";
+    public Rigidbody2D rigidBody;
     [SerializeField] GameObject globalManager;
     GlobalScript globalScript;
 
@@ -21,6 +22,7 @@ public class Paddle : MonoBehaviour
     void Start()
     {
         globalScript = globalManager.GetComponent<GlobalScript>();
+        rigidBody = GameObject.Find(paddle).GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -39,7 +41,7 @@ public class Paddle : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
         {
-            rigidbody.transform.Translate(Vector2.right * horizontalInput * Time.deltaTime * speed);
+            rigidBody.transform.Translate(Vector2.right * horizontalInput * Time.deltaTime * speed);
         }
 
 

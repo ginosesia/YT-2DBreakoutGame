@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2685637103313560648}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.93, y: -2.41, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children: []
@@ -97,12 +97,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9872948edb74864b64b6c7e93d0299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 2685637103313560660}
-  globalManager: {fileID: 0}
+  rigidBody: {fileID: 2685637103313560660}
   pinkEffect: {fileID: 9027088568732102886, guid: 1ccc303b40bbb4c3eb0a2d0f876d69a8, type: 3}
   blueEffect: {fileID: 400404082941167533, guid: 1ec16278a65f340aa8674bd50ae29899, type: 3}
-  soundManager: {fileID: 0}
-  ballLocation: {fileID: 0}
+  redEffect: {fileID: 7389389507880301520, guid: a36ab76315eb54002acbf0be8e131f26, type: 3}
+  greenEffect: {fileID: 4796720597463116568, guid: 335acab74491a479d82d926720ff0d68, type: 3}
+  orangeEffect: {fileID: 1916244070631244149, guid: fc327692d1c52402296e4b4c00ef56ac, type: 3}
+  yellowEffect: {fileID: 5959738002180635271, guid: 1e3188568ece44821bc1c993c78a9f0e, type: 3}
 --- !u!50 &2685637103313560660
 Rigidbody2D:
   serializedVersion: 4

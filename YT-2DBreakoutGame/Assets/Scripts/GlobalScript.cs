@@ -9,7 +9,8 @@ public class GlobalScript : MonoBehaviour
     public Transform ballLocation;
     public GameObject ball;
 
-
+    public int score = 0;
+    public int lives = 3;
 
     private void Update()
     {
