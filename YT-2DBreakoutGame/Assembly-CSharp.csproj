@@ -62,6 +62,8 @@
     <Compile Include="Assets/Scripts/Ball.cs" />
     <Compile Include="Assets/Scripts/Paddle.cs" />
     <Compile Include="Assets/Scripts/UIManager.cs" />
+    <Compile Include="Assets/Scripts/PauseManager.cs" />
+    <Compile Include="Assets/Scripts/GameOverScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

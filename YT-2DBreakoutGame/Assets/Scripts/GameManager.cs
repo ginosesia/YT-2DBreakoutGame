@@ -11,25 +11,29 @@ public class GameManager : MonoBehaviour
     readonly string block = "Block";
 
     [SerializeField] Transform[] blockLevels;
-    public GameObject pausePannel;
 
     GameObject globalManager;
     GlobalScript globalScript;
 
     readonly string globalManagerTag = "GlobalManager";
+    private string sceneName;
 
-
+    //Ints
     int numberOfBlocks;
     int levelNumber = 1;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        globalManager = GameObject.FindGameObjectWithTag(globalManagerTag);
-        globalScript = globalManager.GetComponent<GlobalScript>();
+        sceneName = SceneManager.GetActiveScene().name;
 
-        //pausePannel = GameObject.Find("PausePannel");
+        if(sceneName != menuScene)
+        {
+            globalManager = GameObject.FindGameObjectWithTag(globalManagerTag);
+            globalScript = globalManager.GetComponent<GlobalScript>();
+        }
     }
 
     private void Update()
@@ -41,16 +45,6 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 globalScript.isPaused = true;
-            }
-
-
-            if (globalScript.isPaused)
-            {
-                pausePannel.gameObject.SetActive(true);
-            }
-            else
-            {
-                pausePannel.gameObject.SetActive(false);
             }
 
             numberOfBlocks = GameObject.FindGameObjectsWithTag(block).Length;
@@ -79,11 +73,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(menuScene);
     }
 
+    public void ResumeGame()
+    {
+        globalScript.isPaused = false;
+    }
+
     public void ExitGame()
     {
         Application.Quit();
     }
-
-
-
 }

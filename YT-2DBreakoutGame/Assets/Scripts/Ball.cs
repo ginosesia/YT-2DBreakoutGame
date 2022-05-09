@@ -56,7 +56,7 @@ public class Ball : MonoBehaviour
         {
             //Add force to the ball
             AddForce();
-        }
+        } 
     }
 
      

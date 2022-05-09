@@ -1,17 +1,15 @@
 ﻿<Properties StartupConfiguration="{7C7E4E53-E708-BD9F-BC3D-47945A33B7A9}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="76e546f2-25c6-433f-85d5-2534cd1d6d15" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ball.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameOverScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="14" Column="43" />
-      <File FileName="Assets/Scripts/Paddle.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/Ball.cs" Line="24" Column="45" />
-      <File FileName="Assets/Scripts/GlobalScript.cs" Line="10" Column="28" />
-      <File FileName="Assets/Scripts/SoundManager.cs" Line="14" Column="51" />
+      <File FileName="Assets/Scripts/Ball.cs" Line="60" Column="6" />
+      <File FileName="Assets/Scripts/UIManager.cs" Line="23" Column="1" />
+      <File FileName="Assets/Scripts/GlobalScript.cs" Line="13" Column="26" />
+      <File FileName="Assets/Scripts/Paddle.cs" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="78" Column="39" />
+      <File FileName="Assets/Scripts/PauseManager.cs" Line="3" Column="19" />
+      <File FileName="Assets/Scripts/GameOverScript.cs" Line="12" Column="56" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,5 +27,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5ebb5ae6-5e53-44c6-b227-84b5daa02598" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
